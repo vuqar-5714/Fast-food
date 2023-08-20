@@ -1,0 +1,22 @@
+import React from 'react'
+import "./main.css"
+
+
+const Main = ({data}) => {
+  return (
+    <div className='main'>
+            <div className='main-part'>
+              <p className='header'>Breakfast</p>
+            {data.map((menu)=>
+                <div className='page-control' key={Date.now()}>
+                <img src={menu.src} alt='pictures'/>
+                <p className='name'>{menu.name}</p>
+                <p>{menu.price}</p>
+                </div>)}
+                
+          </div>
+    </div>
+  )
+}
+
+export default Main
